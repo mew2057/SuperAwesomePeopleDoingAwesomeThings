@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿#pragma strict
+
 
 public enum PlayerState
 {
@@ -19,27 +19,37 @@ public enum Response
 	Y
 }
 
-public class Player : MonoBehaviour {
+public class Player extends MonoBehaviour {
 
 	// If a trigger value is less than this number the player has failed.
 	// 1 is fully in.
-	public float failThreshold = 0.9f;
+	public var failThreshold:float = 0.9f;
 
 	// Effectively the game state, managed in the controller.
-	public PlayerState state = PlayerState.Waiting;
+	public var state:PlayerState = PlayerState.Waiting;
 
-	public Response response = Response.None;
+	public var response:Response = Response.None;
 
-	public bool usingController = false;
+	public var usingController:boolean = false;
 
-	public GameObject regularCamera;
-	public GameObject ovrCamera;
+	public var regularCamera:GameObject;
+	public var ovrCamera:GameObject;
+
+	public static var instance:Player;
+
+	function Awake()
+	{
+	// Should only be one
+		this.instance = this;
+	}
+
 
 	// Ensure the state starts at waiting.
-	void Start () 
+	function Start () 
 	{
 		this.state    = PlayerState.Waiting;
 		this.response = Response.None;
+
 		if (OVRManager.display.isPresent)
 		{
 			regularCamera.SetActive(false);
@@ -53,7 +63,7 @@ public class Player : MonoBehaviour {
 	}
 		
 		// Fixed update for the control monitoring.
-	void FixedUpdate () {
+	function FixedUpdate () {
 
 		if( this.state == PlayerState.Waiting )
 		{
@@ -72,25 +82,24 @@ public class Player : MonoBehaviour {
 
 	}
 
-	public bool CheckKeyboardFail()
+	function CheckKeyboardFail() : boolean
 	{
 		return this.usingController && (Input.GetAxis ("Trigger_Right") < failThreshold || Input.GetAxis ("Trigger_Left") < failThreshold);
 	}
 
-	public bool CheckControllerFail()
+	function  CheckControllerFail() : boolean
 	{
 		return !this.usingController && ( !Input.GetButton ("Mouse") || !Input.GetButton ("Space"));
 	}
 
 	// The player has released the controller triggers,therefore they've FAILED.
-	public void TriggerFailure ()
+	function TriggerFailure ()
 	{
-		Debug.Log ("you lose");
 		this.state = PlayerState.Failed;
 	}
 
 	// Checks to see if the player has met the requirements for the ready state.
-	public void CheckReady()
+	function CheckReady()
 	{
 		if( Input.GetAxis ("Trigger_Right") > failThreshold && Input.GetAxis ("Trigger_Left") > failThreshold)
 		{
@@ -104,9 +113,8 @@ public class Player : MonoBehaviour {
 		}
 	}
 
-	public void CheckForAnswer()
+	function CheckForAnswer() 
 	{
-		// TODO keyboard version.
 		if(Input.GetButton("A"))
 		{
 			this.response = Response.A;
@@ -130,7 +138,7 @@ public class Player : MonoBehaviour {
 		}
 	}
 
-	public void AnswerRecieved()
+	function AnswerRecieved()
 	{
 		if(this.state != PlayerState.Failed)
 		{
@@ -140,7 +148,7 @@ public class Player : MonoBehaviour {
 
 	}
 
-	public void PresentQuestion()
+	function PresentQuestion()
 	{
 		if(this.state != PlayerState.Failed)
 		{

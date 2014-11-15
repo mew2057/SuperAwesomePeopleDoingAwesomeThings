@@ -1,40 +1,44 @@
-﻿var isOption1=false;
-var isOption2=false;
-var isOption3=false;
+﻿#pragma strict
 
-function OnMouseEnter(){
-	//change text color
-	renderer.material.color=Color.yellow;
-}
+@script RequireComponent(TextMesh)
 
-function OnMouseExit(){
-	//change text color
-	renderer.material.color=Color.white;
-}
+public class TextAdventureMenu extends MonoBehaviour
+{
+	var textMesh:TextMesh;
+	var scene:String;
+	
+	function Awake()
+	{
+		textMesh = GetComponent("TextMesh") as TextMesh;
+	}
+	
+	function SetOption( newText:String, newScene:String )
+	{
+		textMesh.text = newText;
+		scene         = newScene;		
+	}
+	
+	function OnMouseEnter(){
+		//change text color
+		renderer.material.color=Color.yellow;
+	}
 
-function OnMouseUp(){
-	//is this quit
-	if (isOption1==true) {
-		//quit the game
-		Application.LoadLevel("Scene_X");
+	function OnMouseExit(){
+		//change text color
+		renderer.material.color=Color.white;
 	}
-	else if (isOption2==true) {
-		//quit the game
-		Application.LoadLevel("Scene_Y");
-	}
-	else if (isOption3==true) {
-		//quit the game
-		Application.LoadLevel("Scene_Z");
-	}
-	else {
-		//load level
-		//Application.LoadLevel(1);
-	}
-}
 
-function Update(){
-	//quit game if escape key is pressed
-	if (Input.GetKey(KeyCode.Escape)) {
-    		Application.Quit();
+	function OnMouseUp()
+	{
+		Player.instance.AnswerRecieved();
+		
+		Application.LoadLevel(scene);		
+	}
+
+	function Update(){
+		//quit game if escape key is pressed
+		if (Input.GetKey(KeyCode.Escape)) {
+	    		Application.Quit();
+		}
 	}
 }

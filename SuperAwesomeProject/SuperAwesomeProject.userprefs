@@ -1,11 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\custom\scripts\Controls\Player.js">
     <Files>
-      <File FileName="Assets\custom\scripts\Controls\Player.cs" Line="43" Column="1" />
-      <File FileName="Assets\OVR\Scripts\OVRCameraRig.cs" Line="1" Column="1" />
-      <File FileName="Assets\OVR\Scripts\OVRManager.cs" Line="377" Column="45" />
-      <File FileName="Assets\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" Line="37" Column="75" />
+      <File FileName="Assets\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" Line="1" Column="1" />
+      <File FileName="Assets\custom\scenes\menu core system\Scripts\InGameMenu.js" Line="12" Column="1" />
+      <File FileName="Assets\custom\scripts\Controls\Player.js" Line="54" Column="25" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
