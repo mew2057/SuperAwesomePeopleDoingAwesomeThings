@@ -23,6 +23,8 @@ public class GameManager extends MonoBehaviour
 	public var currentChoice:Choice;
 	
 	public static var Instance:GameManager;
+	
+	public var inMainScene:boolean = false;
 
 	
 	function Awake()
@@ -56,13 +58,15 @@ public class GameManager extends MonoBehaviour
 		
 		var swapIndex:int = 0;
 		var scratchChoice:Choice;
-		
-		for(var i = this.mainSceneChoices.Length -1; i >=0; ++i)
+	
+		// Shuffles the choices so they're always presented differently.		
+		for(var i = this.mainSceneChoices.Length -1; i > 0; --i) 
 		{
-			scratchChoice = this.mainSceneChoices[i];
-			Random.Range(0,i-1);
+			scratchChoice = this.mainSceneChoices[i];			
+			swapIndex = Random.Range(0,i);
+			this.mainSceneChoices[i] = this.mainSceneChoices[swapIndex];
+			this.mainSceneChoices[swapIndex] = scratchChoice;
 		}
-		// TODO do a shuffle here.
 	}
 	
 	function SetSceneStartChoice(choice:Choice)
@@ -70,11 +74,17 @@ public class GameManager extends MonoBehaviour
 		this.currentChoice = choice;
 	}
 	
-	function Start () {
-		
+	function Start () 
+	{
 	}
-
+	
+	
 	function Update () {
 
+	}
+	
+	function OnLevelWasLoaded()
+	{
+		Debug.Log("made it");
 	}
 }

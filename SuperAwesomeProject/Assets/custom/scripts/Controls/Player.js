@@ -109,11 +109,11 @@ public class Player extends MonoBehaviour {
 		else if(Input.GetButton("X"))
 		{
 			this.response = Response.X;
-		}
+		}/*
 		else if(Input.GetButton("Y"))
 		{
 			this.response = Response.Y;
-		}
+		}*/
 		else if(Input.GetButton("B"))
 		{
 			this.response = Response.B;

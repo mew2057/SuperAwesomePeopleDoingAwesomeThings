@@ -15,6 +15,7 @@ class Option extends Prompt {
 
 public class Choice extends MonoBehaviour
 {
+	public var timeToChoice:float = 60.0f;
 	public var prompt:Prompt;
 	public var optionA:Option;
 	public var optionB:Option;
