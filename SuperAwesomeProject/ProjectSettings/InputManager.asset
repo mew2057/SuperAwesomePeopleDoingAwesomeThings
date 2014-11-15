@@ -110,7 +110,7 @@ InputManager:
     altPositiveButton: 
     gravity: 0
     dead: 0
-    sensitivity: .100000001
+    sensitivity: .0125000002
     snap: 0
     invert: 0
     type: 1
@@ -126,7 +126,7 @@ InputManager:
     altPositiveButton: 
     gravity: 0
     dead: 0
-    sensitivity: .100000001
+    sensitivity: .0125000002
     snap: 0
     invert: 0
     type: 1
@@ -165,7 +165,7 @@ InputManager:
     axis: 0
     joyNum: 1
   - serializedVersion: 3
-    m_Name: Look_X
+    m_Name: Mouse X
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -173,8 +173,8 @@ InputManager:
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
-    dead: .300000012
-    sensitivity: 1
+    dead: .150000006
+    sensitivity: .300000012
     snap: 0
     invert: 0
     type: 2
@@ -197,7 +197,7 @@ InputManager:
     axis: 1
     joyNum: 1
   - serializedVersion: 3
-    m_Name: Look_Y
+    m_Name: Mouse Y
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -205,8 +205,8 @@ InputManager:
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
-    dead: .300000012
-    sensitivity: 1
+    dead: .150000006
+    sensitivity: .300000012
     snap: 0
     invert: 1
     type: 2
