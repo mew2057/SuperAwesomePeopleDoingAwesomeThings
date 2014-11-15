@@ -17,7 +17,7 @@ public class GameManager extends MonoBehaviour
 	public var timeBetweenChoices:float = 60;
 	
 	// The choices for the main scene (can be thought of as a stack).
-	public var mainChoices:Choice[];
+	public var mainSceneChoices:Choice[];
 	
 	// The current choice that is being played out.
 	public var currentChoice:Choice;
@@ -52,7 +52,16 @@ public class GameManager extends MonoBehaviour
 	
 	function SetGlobalChoices(choices:Choice[])
 	{
-		this.mainChoices = choices;
+		this.mainSceneChoices = choices;
+		
+		var swapIndex:int = 0;
+		var scratchChoice:Choice;
+		
+		for(var i = this.mainSceneChoices.Length -1; i >=0; ++i)
+		{
+			scratchChoice = this.mainSceneChoices[i];
+			Random.Range(0,i-1);
+		}
 		// TODO do a shuffle here.
 	}
 	

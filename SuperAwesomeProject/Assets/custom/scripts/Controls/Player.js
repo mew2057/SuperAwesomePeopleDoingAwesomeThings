@@ -1,14 +1,7 @@
 ﻿#pragma strict
 
 
-public enum PlayerState
-{
-	Waiting,
-	Driving,
-	Question, // A Question is on screen.
-	Answered, 
-	Failed
-}
+
 
 public enum Response
 {
@@ -25,9 +18,6 @@ public class Player extends MonoBehaviour {
 	// 1 is fully in.
 	public var failThreshold:float = 0.9f;
 
-	// Effectively the game state, managed in the controller.
-	public var state:PlayerState = PlayerState.Waiting;
-
 	public var response:Response = Response.None;
 
 	public var usingController:boolean = false;
@@ -35,19 +25,16 @@ public class Player extends MonoBehaviour {
 	public var regularCamera:GameObject;
 	public var ovrCamera:GameObject;
 
-	public static var instance:Player;
-
 	function Awake()
 	{
-	// Should only be one
-		this.instance = this;
 	}
 
 
 	// Ensure the state starts at waiting.
 	function Start () 
 	{
-		this.state    = PlayerState.Waiting;
+		GameManager.Instance.state = GameState.Waiting;
+		GameManager.Instance.player = this;
 		this.response = Response.None;
 
 		if (OVRManager.display.isPresent)
@@ -65,17 +52,17 @@ public class Player extends MonoBehaviour {
 		// Fixed update for the control monitoring.
 	function FixedUpdate () {
 
-		if( this.state == PlayerState.Waiting )
+		if( GameManager.Instance.state == GameState.Waiting )
 		{
 			this.CheckReady();
 		}
-		else if( this.state == PlayerState.Question && this.usingController)
+		else if( GameManager.Instance.state == GameState.Question && this.usingController)
 		{
 			this.CheckForAnswer();
 		}
 
 		// If we're playing and the player releases either axis they've lost. 
-		if( this.state != PlayerState.Waiting && (this.CheckKeyboardFail() ||this.CheckControllerFail()))
+		if( GameManager.Instance.state != GameState.Waiting && (this.CheckKeyboardFail() ||this.CheckControllerFail()))
 		{
 			TriggerFailure();
 		}
@@ -95,7 +82,7 @@ public class Player extends MonoBehaviour {
 	// The player has released the controller triggers,therefore they've FAILED.
 	function TriggerFailure ()
 	{
-		this.state = PlayerState.Failed;
+		GameManager.Instance.state = GameState.Failed;
 	}
 
 	// Checks to see if the player has met the requirements for the ready state.
@@ -104,12 +91,12 @@ public class Player extends MonoBehaviour {
 		if( Input.GetAxis ("Trigger_Right") > failThreshold && Input.GetAxis ("Trigger_Left") > failThreshold)
 		{
 			this.usingController = true;
-			this.state = PlayerState.Driving;
+			GameManager.Instance.state = GameState.Driving;
 		}
 		else if(Input.GetButton ("Mouse") && Input.GetButton ("Space"))
 		{
 			this.usingController = false;
-			this.state = PlayerState.Driving;
+			GameManager.Instance.state = GameState.Driving;
 		}
 	}
 
@@ -132,27 +119,23 @@ public class Player extends MonoBehaviour {
 			this.response = Response.B;
 		}
 
-		if(this.state != PlayerState.Failed && this.response != Response.None)
+		if(GameManager.Instance.state != GameState.Failed && this.response != Response.None)
 		{
-			this.state = PlayerState.Answered;
+			GameManager.Instance.state = GameState.Answered;
 		}
 	}
 
 	function AnswerRecieved()
 	{
-		if(this.state != PlayerState.Failed)
-		{
-			this.response = Response.None;
-			this.state = PlayerState.Driving;
-		}
-
+		this.response = Response.None;
+		GameManager.Instance.state = GameState.Driving;
 	}
 
 	function PresentQuestion()
 	{
-		if(this.state != PlayerState.Failed)
+		if(GameManager.Instance.state != GameState.Failed)
 		{
-			this.state = PlayerState.Question;
+			GameManager.Instance.state = GameState.Question;
 		}
 	}
 }
