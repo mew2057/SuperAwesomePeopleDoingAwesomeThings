@@ -55,8 +55,12 @@ PlayerSettings:
   xboxEnableFitness: 0
   visibleInBackground: 1
   macFullscreenMode: 2
+<<<<<<< HEAD
+  d3d9FullscreenMode: 1
+=======
   d3d9FullscreenMode: 0
   d3d11ForceExclusiveMode: 0
+>>>>>>> 643ebd150642e80ca95726b055e8080c90aaf6cf
   xboxSpeechDB: 0
   xboxEnableHeadOrientation: 0
   xboxEnableGuest: 0
@@ -70,7 +74,7 @@ PlayerSettings:
   iPhoneBundleIdentifier: com.Company.ProductName
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
-  productGUID: b9e5f9b6345b61346a1d43f263537fc9
+  productGUID: b71719b99cad09645be717cbac746f07
   iPhoneBundleVersion: 1.0
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 9
