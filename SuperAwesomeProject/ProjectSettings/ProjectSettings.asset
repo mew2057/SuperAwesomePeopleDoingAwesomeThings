@@ -243,6 +243,6 @@ PlayerSettings:
   tizenMicrophonePermissions: 0
   stvDeviceAddress: 
   firstStreamedLevelWithResources: 0
-  unityRebuildLibraryVersion: 0
+  unityRebuildLibraryVersion: 9
   unityForwardCompatibleVersion: 39
   unityStandardAssetsVersion: 0
