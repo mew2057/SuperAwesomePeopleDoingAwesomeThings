@@ -30,7 +30,7 @@ public class GameManager extends MonoBehaviour
 		// Catches errant game managers.
 		if(Instance)
 		{
-			Destroy(this)
+			Destroy(this);
 			return;
 		}
 		
