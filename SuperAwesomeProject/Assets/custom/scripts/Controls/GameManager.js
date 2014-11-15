@@ -28,6 +28,11 @@ public class GameManager extends MonoBehaviour
 	public var ovrCamera:GameObject;
 	
 	public static var MainCamera:GameObject;
+	
+	private var terrainChunk1:GameObject;
+	private var terrainChunk2:GameObject;
+	public var terrainChunk:GameObject;
+	public var carSpeed:float= 100.0f;
 
 	function Awake()
 	{
@@ -82,10 +87,28 @@ public class GameManager extends MonoBehaviour
 	}
 	
 	function Start () {
+		var chunkSize:Vector3 = terrainChunk.GetComponentInChildren(Terrain).terrainData.size;
 		
+		terrainChunk1 = Instantiate(terrainChunk,Vector3(-chunkSize.x,0,0),Quaternion.identity);
+		terrainChunk2 = Instantiate(terrainChunk,Vector3(0,0,0),Quaternion.identity);
 	}
 
 	function Update () {
+		var curLocation:Vector3 = terrainChunk1.transform.position;
 
+		curLocation.x+= carSpeed*Time.deltaTime;
+		var diff:float;
+		if(curLocation.x>0.0){
+			diff=curLocation.x-1000.0f;
+			curLocation.x=-1000.0f+diff;
+		}
+		terrainChunk1.transform.position=curLocation;
+		curLocation = terrainChunk2.transform.position;
+		curLocation.x+= carSpeed*Time.deltaTime;
+		if(curLocation.x>1000.0){
+			diff=curLocation.x-1000.0f;
+			curLocation.x=-1000.0f+diff;
+		}
+		terrainChunk2.transform.position=curLocation;
 	}
 }
