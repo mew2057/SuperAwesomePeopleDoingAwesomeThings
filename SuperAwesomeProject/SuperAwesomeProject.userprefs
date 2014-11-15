@@ -1,16 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Standard Assets\OVR\Scripts\OVRManager.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\custom\scripts\Billboard.cs">
     <Files>
-      <File FileName="SuperAwesomeProject.sln" Line="58" Column="1" />
-      <File FileName="Assets\custom\scripts\Scene\Choice.js" Line="18" Column="39" />
       <File FileName="Assets\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" Line="1" Column="1" />
       <File FileName="Assets\custom\scripts\Controls\Player.js" Line="1" Column="1" />
       <File FileName="Assets\custom\scripts\Scene\ChoiceManager.js" Line="1" Column="1" />
       <File FileName="Assets\custom\scripts\Controls\GameManager.js" Line="1" Column="1" />
-      <File FileName="Assets\Scenes\menu core system\Scripts\TextAdventureMenu.js" Line="1" Column="1" />
-      <File FileName="Assets\Standard Assets\OVR\Scripts\OVRDisplay.cs" Line="382" Column="1" />
-      <File FileName="Assets\Standard Assets\OVR\Scripts\OVRManager.cs" Line="440" Column="39" />
+      <File FileName="Assets\custom\scripts\Scene\Choice.js" Line="1" Column="1" />
+      <File FileName="Assets\custom\scripts\SceneManager.cs" Line="29" Column="32" />
+      <File FileName="Assets\custom\scripts\Billboard.cs" Line="18" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

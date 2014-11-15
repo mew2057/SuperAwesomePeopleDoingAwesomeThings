@@ -47,8 +47,6 @@ public class Player extends MonoBehaviour {
 			regularCamera.SetActive(true);
 			ovrCamera.SetActive(false);
 		}
-		
-		DontDestroyOnLoad(gameObject);
 	}
 		
 		// Fixed update for the control monitoring.
@@ -111,11 +109,11 @@ public class Player extends MonoBehaviour {
 		else if(Input.GetButton("X"))
 		{
 			this.response = Response.X;
-		}/*
+		}
 		else if(Input.GetButton("Y"))
 		{
 			this.response = Response.Y;
-		}*/
+		}
 		else if(Input.GetButton("B"))
 		{
 			this.response = Response.B;
