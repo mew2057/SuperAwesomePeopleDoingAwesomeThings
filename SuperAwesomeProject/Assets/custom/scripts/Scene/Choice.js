@@ -8,7 +8,6 @@ class Prompt extends System.Object
 }
 
 class Option extends Prompt {
-	var scene:String;
 	var nextChoice:Choice;
 	// TODO hook events into this.
 }
@@ -16,6 +15,8 @@ class Option extends Prompt {
 public class Choice extends MonoBehaviour
 {
 	public var timeToChoice:float = 60.0f;
+	public var scene:String;
+
 	public var prompt:Prompt;
 	public var optionA:Option;
 	public var optionB:Option;
