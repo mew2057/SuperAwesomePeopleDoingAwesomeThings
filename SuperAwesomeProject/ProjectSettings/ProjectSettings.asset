@@ -23,7 +23,7 @@ PlayerSettings:
   m_ActiveColorSpace: 0
   m_MTRendering: 1
   m_MobileMTRendering: 0
-  m_UseDX11: 0
+  m_UseDX11: 1
   m_Stereoscopic3D: 0
   iosShowActivityIndicatorOnLoading: -1
   androidShowActivityIndicatorOnLoading: -1
@@ -55,12 +55,8 @@ PlayerSettings:
   xboxEnableFitness: 0
   visibleInBackground: 1
   macFullscreenMode: 2
-<<<<<<< HEAD
-  d3d9FullscreenMode: 1
-=======
   d3d9FullscreenMode: 0
   d3d11ForceExclusiveMode: 0
->>>>>>> 643ebd150642e80ca95726b055e8080c90aaf6cf
   xboxSpeechDB: 0
   xboxEnableHeadOrientation: 0
   xboxEnableGuest: 0
@@ -74,7 +70,7 @@ PlayerSettings:
   iPhoneBundleIdentifier: com.Company.ProductName
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
-  productGUID: b71719b99cad09645be717cbac746f07
+  productGUID: 6c330ad19498d9f4e90b9cdba344bc48
   iPhoneBundleVersion: 1.0
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 9
@@ -110,11 +106,7 @@ PlayerSettings:
   AndroidKeystoreName: 
   AndroidKeyaliasName: 
   resolutionDialogBanner: {fileID: 0}
-  m_BuildTargetIcons:
-  - m_BuildTarget: 
-    m_Icons:
-    - m_Icon: {fileID: 0}
-      m_Size: 128
+  m_BuildTargetIcons: []
   m_BuildTargetBatching: []
   webPlayerTemplate: APPLICATION:Default
   m_TemplateCustomTags: {}
@@ -251,6 +243,6 @@ PlayerSettings:
   tizenMicrophonePermissions: 0
   stvDeviceAddress: 
   firstStreamedLevelWithResources: 0
-  unityRebuildLibraryVersion: 9
+  unityRebuildLibraryVersion: 0
   unityForwardCompatibleVersion: 39
   unityStandardAssetsVersion: 0
