@@ -84,8 +84,8 @@ GameObject:
   - 4: {fileID: 20308281}
   - 102: {fileID: 20308280}
   - 23: {fileID: 20308279}
-  - 114: {fileID: 20308282}
   - 65: {fileID: 20308283}
+  - 114: {fileID: 20308282}
   m_Layer: 0
   m_Name: txt_Option_A
   m_TagString: Untagged
@@ -154,12 +154,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 20308278}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3061532bde6bdc642bd94b5f21e8eda1, type: 3}
+  m_Script: {fileID: 11500000, guid: 1dfb23395dd844548a1711273eb79769, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isGame: 1
-  isDev: 0
-  isQuit: 0
+  isOption1: 1
+  isOption2: 0
+  isOption3: 0
 --- !u!65 &20308283
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -182,8 +182,8 @@ GameObject:
   - 4: {fileID: 1024593204}
   - 102: {fileID: 1024593203}
   - 23: {fileID: 1024593202}
-  - 114: {fileID: 1024593201}
   - 65: {fileID: 1024593200}
+  - 114: {fileID: 1024593201}
   m_Layer: 0
   m_Name: txt_Option_B
   m_TagString: Untagged
@@ -211,12 +211,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1024593199}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3061532bde6bdc642bd94b5f21e8eda1, type: 3}
+  m_Script: {fileID: 11500000, guid: 1dfb23395dd844548a1711273eb79769, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isGame: 1
-  isDev: 0
-  isQuit: 0
+  isOption1: 0
+  isOption2: 1
+  isOption3: 0
 --- !u!23 &1024593202
 Renderer:
   m_ObjectHideFlags: 0
@@ -280,8 +280,8 @@ GameObject:
   - 4: {fileID: 1553653467}
   - 102: {fileID: 1553653466}
   - 23: {fileID: 1553653465}
-  - 114: {fileID: 1553653468}
   - 65: {fileID: 1553653469}
+  - 114: {fileID: 1553653468}
   m_Layer: 0
   m_Name: txt_Option_C
   m_TagString: Untagged
@@ -350,12 +350,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1553653464}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3061532bde6bdc642bd94b5f21e8eda1, type: 3}
+  m_Script: {fileID: 11500000, guid: 1dfb23395dd844548a1711273eb79769, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isGame: 0
-  isDev: 0
-  isQuit: 1
+  isOption1: 0
+  isOption2: 0
+  isOption3: 1
 --- !u!65 &1553653469
 BoxCollider:
   m_ObjectHideFlags: 0
