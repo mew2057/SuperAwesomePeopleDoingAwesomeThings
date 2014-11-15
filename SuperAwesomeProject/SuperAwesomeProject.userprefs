@@ -1,8 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\OVR\Scripts\OVRManager.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\custom\scenes\menu core system\Scripts\Game Menu.js">
     <Files>
-      <File FileName="Assets\OVR\Scripts\OVRManager.cs" Line="431" Column="1" />
+      <File FileName="Assets\custom\scenes\menu core system\Scripts\Game Menu.js" Line="5" Column="25" />
+      <File FileName="Assets\custom\scenes\menu core system\Scripts\TextAdventureMenu.js" Line="5" Column="25" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

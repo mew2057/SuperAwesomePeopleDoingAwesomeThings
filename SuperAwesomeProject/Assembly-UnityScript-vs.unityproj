@@ -49,6 +49,7 @@
      <Compile Include="Assets\custom\scenes\menu core system\Scripts\Dev Menu.js" />
      <Compile Include="Assets\custom\scenes\menu core system\Scripts\Game Menu.js" />
      <Compile Include="Assets\custom\scenes\menu core system\Scripts\MenuButton.js" />
+     <Compile Include="Assets\custom\scenes\menu core system\Scripts\TextAdventureMenu.js" />
      <None Include="Assets\Plugins\donotdelete.txt" />
      <None Include="Assets\Plugins\x86_64\donotdelete.txt" />
      <None Include="Assets\Tuscany\Models\Materials\Vertex color unlit 5.shader" />
