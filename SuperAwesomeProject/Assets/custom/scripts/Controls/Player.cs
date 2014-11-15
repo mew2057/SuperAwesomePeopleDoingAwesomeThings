@@ -59,12 +59,11 @@ public class Player : MonoBehaviour {
 		{
 			this.CheckReady();
 		}
-		else if( this.state == PlayerState.Question)
+		else if( this.state == PlayerState.Question && this.usingController)
 		{
 			this.CheckForAnswer();
 		}
 
-		// TODO keyboard version.
 		// If we're playing and the player releases either axis they've lost. 
 		if( this.state != PlayerState.Waiting && (this.CheckKeyboardFail() ||this.CheckControllerFail()))
 		{
