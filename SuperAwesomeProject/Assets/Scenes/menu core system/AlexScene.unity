@@ -116,6 +116,75 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   terrainChunk: {fileID: 100002, guid: 49cf14b86a9734c4187bde504d338387, type: 2}
   carSpeed: 100
+--- !u!1 &658957364
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 658957365}
+  - 33: {fileID: 658957368}
+  - 65: {fileID: 658957367}
+  - 23: {fileID: 658957366}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &658957365
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 658957364}
+  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106829}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 30.7488651, z: 27.3357124}
+  m_Children: []
+  m_Father: {fileID: 905244236}
+  m_RootOrder: 0
+--- !u!23 &658957366
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 658957364}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: 010c29383d062344493ac443174e58a0, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!65 &658957367
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 658957364}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &658957368
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 658957364}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &664231751
 Prefab:
   m_ObjectHideFlags: 0
@@ -238,6 +307,48 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1917592475}
   m_RootOrder: 0
+--- !u!1 &905244235
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: f173b00736d5ed04faa7dc7f8e39e044, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 905244236}
+  - 114: {fileID: 905244237}
+  m_Layer: 0
+  m_Name: Billboard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &905244236
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: f173b00736d5ed04faa7dc7f8e39e044, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 905244235}
+  m_LocalRotation: {x: 0, y: -.707106829, z: 0, w: .707106829}
+  m_LocalPosition: {x: 436.355469, y: 30.8563442, z: 497.998566}
+  m_LocalScale: {x: 1, y: 1, z: .495880038}
+  m_Children:
+  - {fileID: 658957365}
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+--- !u!114 &905244237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: f173b00736d5ed04faa7dc7f8e39e044,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 905244235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fed75f3e585548489742e8333ac1ae5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraToSeek: {fileID: 0}
 --- !u!1 &1410569727
 GameObject:
   m_ObjectHideFlags: 0
