@@ -21,10 +21,7 @@ public class Player extends MonoBehaviour {
 	public var response:Response = Response.None;
 
 	public var usingController:boolean = false;
-
-	public var regularCamera:GameObject;
-	public var ovrCamera:GameObject;
-
+	
 	function Awake()
 	{
 	}
@@ -36,17 +33,7 @@ public class Player extends MonoBehaviour {
 		GameManager.Instance.state = GameState.Waiting;
 		GameManager.Instance.player = this;
 		this.response = Response.None;
-
-		if (OVRManager.display.isPresent)
-		{
-			regularCamera.SetActive(false);
-			ovrCamera.SetActive(true);
-		}
-		else
-		{
-			regularCamera.SetActive(true);
-			ovrCamera.SetActive(false);
-		}
+		
 	}
 		
 		// Fixed update for the control monitoring.

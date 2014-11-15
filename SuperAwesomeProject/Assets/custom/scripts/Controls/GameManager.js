@@ -24,7 +24,11 @@ public class GameManager extends MonoBehaviour
 	
 	public static var Instance:GameManager;
 
+	public var regularCamera:GameObject;
+	public var ovrCamera:GameObject;
 	
+	public static var MainCamera:GameObject;
+
 	function Awake()
 	{
 		// Catches errant game managers.
@@ -38,6 +42,20 @@ public class GameManager extends MonoBehaviour
 		this.state = GameState.Waiting;
 		
 		DontDestroyOnLoad(gameObject);
+		
+		if (OVRManager.display.isPresent)
+		{
+			regularCamera.SetActive(false);
+			ovrCamera.SetActive(true);
+			MainCamera = ovrCamera;
+			
+		}
+		else
+		{
+			regularCamera.SetActive(true);
+			ovrCamera.SetActive(false);
+			MainCamera = regularCamera;
+		}
 	}
 	
 	// Reacts to context switching.
@@ -56,13 +74,6 @@ public class GameManager extends MonoBehaviour
 		
 		var swapIndex:int = 0;
 		var scratchChoice:Choice;
-		
-		for(var i = this.mainSceneChoices.Length -1; i >=0; ++i)
-		{
-			scratchChoice = this.mainSceneChoices[i];
-			Random.Range(0,i-1);
-		}
-		// TODO do a shuffle here.
 	}
 	
 	function SetSceneStartChoice(choice:Choice)
