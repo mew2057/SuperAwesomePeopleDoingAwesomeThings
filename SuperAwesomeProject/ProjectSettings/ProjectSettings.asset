@@ -23,7 +23,7 @@ PlayerSettings:
   m_ActiveColorSpace: 0
   m_MTRendering: 1
   m_MobileMTRendering: 0
-  m_UseDX11: 0
+  m_UseDX11: 1
   m_Stereoscopic3D: 0
   iosShowActivityIndicatorOnLoading: -1
   androidShowActivityIndicatorOnLoading: -1
@@ -55,12 +55,8 @@ PlayerSettings:
   xboxEnableFitness: 0
   visibleInBackground: 1
   macFullscreenMode: 2
-<<<<<<< HEAD
-  d3d9FullscreenMode: 1
-=======
   d3d9FullscreenMode: 0
   d3d11ForceExclusiveMode: 0
->>>>>>> c284fb84512d56490e6ee4e276111b8c971fc8a4
   xboxSpeechDB: 0
   xboxEnableHeadOrientation: 0
   xboxEnableGuest: 0
@@ -74,7 +70,7 @@ PlayerSettings:
   iPhoneBundleIdentifier: com.Company.ProductName
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
-  productGUID: f0493eca3533d3941b249b7cf192bb6f
+  productGUID: b9e5f9b6345b61346a1d43f263537fc9
   iPhoneBundleVersion: 1.0
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 9
@@ -110,13 +106,9 @@ PlayerSettings:
   AndroidKeystoreName: 
   AndroidKeyaliasName: 
   resolutionDialogBanner: {fileID: 0}
-  m_BuildTargetIcons:
-  - m_BuildTarget: 
-    m_Icons:
-    - m_Icon: {fileID: 0}
-      m_Size: 128
+  m_BuildTargetIcons: []
   m_BuildTargetBatching: []
-  webPlayerTemplate: APPLICATION:Black Background
+  webPlayerTemplate: APPLICATION:Default
   m_TemplateCustomTags: {}
   XboxTitleId: 
   XboxImageXexPath: 

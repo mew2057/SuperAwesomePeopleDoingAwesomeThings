@@ -9,7 +9,6 @@ public class InGameMenu extends MonoBehaviour
 
 	function Start () 
 	{
-		Debug.Log(Player.instance);
 		optionA.SetOption("test","");
 		optionA.gameObject.active = true;
 	}
@@ -22,15 +21,15 @@ public class InGameMenu extends MonoBehaviour
 	function Update () 
 	{
 	
-		if(Player.instance.state == PlayerState.Question )
+		if(GameManager.Instance.state == GameState.Question )
 		{
-			Player.instance.CheckForAnswer();
+			GameManager.Instance.player.CheckForAnswer();
 		}
 		
 		// Only triggers if the player has answered a question.
-		if(Player.instance.state == PlayerState.Answered)
+		if(GameManager.Instance.state == GameState.Question)
 		{			
-			var response:Response = Player.instance.response;
+			var response:Response = GameManager.Instance.player.response;
 			
 			switch (response)
 			{

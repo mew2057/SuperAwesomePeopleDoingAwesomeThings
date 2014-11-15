@@ -30,7 +30,7 @@ public class TextAdventureMenu extends MonoBehaviour
 
 	function OnMouseUp()
 	{
-		Player.instance.AnswerRecieved();
+		GameManager.Instance.AnswerRecieved();
 		
 		Application.LoadLevel(scene);		
 	}
