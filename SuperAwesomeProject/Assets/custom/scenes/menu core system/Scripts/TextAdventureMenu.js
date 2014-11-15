@@ -1,6 +1,6 @@
-var isGame=false;
-var isDev=false;
-var isQuit=false;
+﻿var isOption1=false;
+var isOption2=false;
+var isOption3=false;
 
 function OnMouseEnter(){
 	//change text color
@@ -14,13 +14,17 @@ function OnMouseExit(){
 
 function OnMouseUp(){
 	//is this quit
-	if (isGame==true) {
+	if (isOption1==true) {
 		//quit the game
-		Application.LoadLevel("StartingScene");
+		Application.LoadLevel("Scene_X");
 	}
-	if (isQuit==true) {
+	else if (isOption2==true) {
 		//quit the game
-		Application.Quit();
+		Application.LoadLevel("Scene_Y");
+	}
+	else if (isOption3==true) {
+		//quit the game
+		Application.LoadLevel("Scene_Z");
 	}
 	else {
 		//load level
