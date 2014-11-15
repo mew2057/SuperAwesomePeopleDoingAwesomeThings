@@ -53,6 +53,8 @@
      <Compile Include="Assets\custom\scenes\menu core system\Scripts\TextAdventureMenu.js" />
      <Compile Include="Assets\custom\scripts\Controls\GameManager.js" />
      <Compile Include="Assets\custom\scripts\Controls\Player.js" />
+     <Compile Include="Assets\custom\scripts\Scene\Choice.js" />
+     <Compile Include="Assets\custom\scripts\Scene\ChoiceManager.js" />
      <None Include="Assets\Plugins\donotdelete.txt" />
      <None Include="Assets\Plugins\x86_64\donotdelete.txt" />
      <None Include="Assets\Tuscany\Models\Materials\Vertex color unlit 5.shader" />
