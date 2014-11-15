@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scenes\menu core system\Scripts\InGameMenu.js" />
      <Compile Include="Assets\Scenes\menu core system\Scripts\MenuButton.js" />
      <Compile Include="Assets\Scenes\menu core system\Scripts\TextAdventureMenu.js" />
+     <Compile Include="Assets\custom\scripts\Billboard.js" />
      <Compile Include="Assets\custom\scripts\Controls\GameManager.js" />
      <Compile Include="Assets\custom\scripts\Controls\Player.js" />
      <Compile Include="Assets\custom\scripts\Scene\Choice.js" />
