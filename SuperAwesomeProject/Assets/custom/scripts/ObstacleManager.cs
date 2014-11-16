@@ -18,6 +18,7 @@ public class ObstacleManager : MonoBehaviour {
 	float score =0.0f;
 	bool running= true;
 	bool musicPlaying=false;
+	float musicRun=0.0f;
 	// Use this for initialization
 	void Start () {
 		obstacleList= new ArrayList();
@@ -29,6 +30,12 @@ public class ObstacleManager : MonoBehaviour {
 		if(!musicPlaying){
 			AudioSource.PlayClipAtPoint(music,GameObject.Find("Player").transform.position);
 			musicPlaying=true;
+		}else{
+			musicRun+=Time.deltaTime;
+			if(musicRun>15.0f){
+				musicRun=0.0f;
+				AudioSource.PlayClipAtPoint(music,GameObject.Find("Player").transform.position);
+			}
 		}
 		if(running){
 			score+=Time.deltaTime*curSpeed/1000.0f;

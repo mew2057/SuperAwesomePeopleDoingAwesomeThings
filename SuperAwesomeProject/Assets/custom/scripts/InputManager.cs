@@ -23,6 +23,9 @@ public class InputManager : MonoBehaviour {
 		if(Input.GetMouseButtonUp(0)){
 			mouseDown=false;
 		}
+		if (Input.GetKeyDown(KeyCode.Escape)) {
+			Application.Quit();
+		}
 
 		Vector3 curPosition= mainPlayer.transform.position;
 		zVelocity+=40.0f * Time.deltaTime;

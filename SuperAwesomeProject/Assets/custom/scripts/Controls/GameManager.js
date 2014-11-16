@@ -49,7 +49,7 @@ public class GameManager extends MonoBehaviour
 		
 		DontDestroyOnLoad(gameObject);
 		
-		if (OVRManager.display.isPresent)
+		/*if (OVRManager.display.isPresent)
 		{
 			regularCamera.SetActive(false);
 			ovrCamera.SetActive(true);
@@ -57,11 +57,11 @@ public class GameManager extends MonoBehaviour
 			
 		}
 		else
-		{
+		{*/
 			regularCamera.SetActive(true);
 			ovrCamera.SetActive(false);
 			MainCamera = regularCamera;
-		}
+		//}
 	}
 	
 	// Reacts to context switching.
