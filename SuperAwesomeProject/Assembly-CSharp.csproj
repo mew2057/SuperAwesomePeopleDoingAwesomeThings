@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CarSpeed.cs" />
      <Compile Include="Assets\custom\scripts\InputManager.cs" />
      <Compile Include="Assets\custom\scripts\ObstacleManager.cs" />
      <Compile Include="Assets\custom\scripts\SceneManager.cs" />

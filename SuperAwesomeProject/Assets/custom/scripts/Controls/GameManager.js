@@ -33,6 +33,7 @@ public class GameManager extends MonoBehaviour
 	private var terrainChunk2:GameObject;
 	public var terrainChunk:GameObject;
 	public var carSpeed:float= 100.0f;
+	public var speed:GameObject;
 
 	function Awake()
 	{
@@ -91,6 +92,7 @@ public class GameManager extends MonoBehaviour
 		
 		terrainChunk1 = Instantiate(terrainChunk,Vector3(-chunkSize.x,0,0),Quaternion.identity);
 		terrainChunk2 = Instantiate(terrainChunk,Vector3(0,0,0),Quaternion.identity);
+		speed = GameObject.Find("CarSpeed");
 	}
 
 	function Update () {
