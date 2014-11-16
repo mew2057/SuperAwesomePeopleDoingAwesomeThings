@@ -7,6 +7,7 @@ public class ObstacleManager : MonoBehaviour {
 	public GameObject otherBillboard;
 	public GameObject rockBillboard;
 	public GameObject treeBillboard;
+	public AudioClip music;
 	ArrayList obstacleList;
 
 	float spawnTimer= 0.5f;
@@ -16,6 +17,7 @@ public class ObstacleManager : MonoBehaviour {
 	GameObject shitmobile;
 	float score =0.0f;
 	bool running= true;
+	bool musicPlaying=false;
 	// Use this for initialization
 	void Start () {
 		obstacleList= new ArrayList();
@@ -24,6 +26,10 @@ public class ObstacleManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(!musicPlaying){
+			AudioSource.PlayClipAtPoint(music,GameObject.Find("Player").transform.position);
+			musicPlaying=true;
+		}
 		if(running){
 			score+=Time.deltaTime*curSpeed/1000.0f;
 			curSpeed+=Time.deltaTime*10.0f;
@@ -76,6 +82,10 @@ public class ObstacleManager : MonoBehaviour {
 
 	void OnGUI(){
 		GUI.TextArea(new Rect(500,500,100,50),"Score: " + score.ToString());
+
+		if(!running){
+			GUI.TextArea(new Rect(500,200,100,50),"GAME OVER!");
+		}
 
 	}
 }
