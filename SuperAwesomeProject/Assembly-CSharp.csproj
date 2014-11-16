@@ -46,6 +46,8 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\custom\scripts\InputManager.cs" />
+     <Compile Include="Assets\custom\scripts\ObstacleManager.cs" />
      <Compile Include="Assets\custom\scripts\SceneManager.cs" />
      <None Include="Assets\Plugins\donotdelete.txt" />
      <None Include="Assets\Plugins\x86_64\donotdelete.txt" />
