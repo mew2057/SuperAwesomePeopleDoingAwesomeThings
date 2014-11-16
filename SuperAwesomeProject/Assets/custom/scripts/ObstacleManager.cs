@@ -7,6 +7,7 @@ public class ObstacleManager : MonoBehaviour {
 	public GameObject otherBillboard;
 	public GameObject rockBillboard;
 	public GameObject treeBillboard;
+	public AudioClip music;
 	ArrayList obstacleList;
 
 	float spawnTimer= 0.5f;
@@ -14,6 +15,9 @@ public class ObstacleManager : MonoBehaviour {
 	int obstacleType = 0;
 	float curSpeed= 100.0f;
 	GameObject shitmobile;
+	float score =0.0f;
+	bool running= true;
+	bool musicPlaying=false;
 	// Use this for initialization
 	void Start () {
 		obstacleList= new ArrayList();
@@ -22,49 +26,66 @@ public class ObstacleManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		curSpeed+=Time.deltaTime*10.0f;
-		currentTimer+=Time.deltaTime;
-		if(currentTimer > spawnTimer){
-			currentTimer =0.0f;
+		if(!musicPlaying){
+			AudioSource.PlayClipAtPoint(music,GameObject.Find("Player").transform.position);
+			musicPlaying=true;
+		}
+		if(running){
+			score+=Time.deltaTime*curSpeed/1000.0f;
+			curSpeed+=Time.deltaTime*10.0f;
+			currentTimer+=Time.deltaTime;
+			if(currentTimer > spawnTimer){
+				currentTimer =0.0f;
 
-			obstacleType = (obstacleType +1)%4;
-			GameObject toSpawn = new GameObject();
-			switch(obstacleType){
-			case 0:
-				toSpawn=deerBillboard;
-				break;
-			case 1:
-				toSpawn=rockBillboard;
-				break;
-			case 2:
-				toSpawn=treeBillboard;
-				break;
-			case 3:
-				toSpawn=otherBillboard;
-				break;
+				obstacleType = (obstacleType +1)%4;
+				GameObject toSpawn = new GameObject();
+				switch(obstacleType){
+				case 0:
+					toSpawn=deerBillboard;
+					break;
+				case 1:
+					toSpawn=rockBillboard;
+					break;
+				case 2:
+					toSpawn=treeBillboard;
+					break;
+				case 3:
+					toSpawn=otherBillboard;
+					break;
+
+				}
+				GameObject curObstacle= (GameObject)GameObject.Instantiate(toSpawn,new Vector3(-500,5,Random.Range(-20,50)),Quaternion.identity);
+				obstacleList.Add(curObstacle);
 
 			}
-			GameObject curObstacle= (GameObject)GameObject.Instantiate(toSpawn,new Vector3(-500,5,Random.Range(-20,50)),Quaternion.identity);
-			obstacleList.Add(curObstacle);
+			GameObject toRemove =null;
+			foreach(GameObject g in obstacleList){
+				Vector3 newVector =  g.transform.position;
+				newVector.x+= Time.deltaTime * curSpeed;
+				g.transform.position= newVector;
 
-		}
-		GameObject toRemove =null;
-		foreach(GameObject g in obstacleList){
-			Vector3 newVector =  g.transform.position;
-			newVector.x+= Time.deltaTime * curSpeed;
-			g.transform.position= newVector;
+				float shitZ = shitmobile.transform.position.z;
+				if(g.transform.position.x>-15.0f && g.transform.position.x <15.0f && Mathf.Abs(g.transform.position.z-shitZ)<4.0f){//collision detection
+					toRemove= g;
+					running=false;
+				}
 
-			float shitZ = shitmobile.transform.position.z;
-			if(g.transform.position.x>-15.0f && g.transform.position.x <15.0f && Mathf.Abs(g.transform.position.z-shitZ)<4.0f){//collision detection
-				toRemove= g;
+			}
+			if(toRemove!=null){//Game over
+				obstacleList.Remove(toRemove);
+				Destroy(toRemove);
 			}
 
 		}
-		if(toRemove!=null){//Game over
-			obstacleList.Remove(toRemove);
-			Destroy(toRemove);
-		}
-
 	
+	}
+
+	void OnGUI(){
+		GUI.TextArea(new Rect(500,500,100,50),"Score: " + score.ToString());
+
+		if(!running){
+			GUI.TextArea(new Rect(500,200,100,50),"GAME OVER!");
+		}
+
 	}
 }

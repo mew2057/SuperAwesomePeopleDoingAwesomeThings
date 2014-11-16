@@ -6573,6 +6573,10 @@ Prefab:
       propertyPath: treeBillboard
       value: 
       objectReference: {fileID: 100000, guid: ac5c705183f2b024c82bdb09006d5906, type: 2}
+    - target: {fileID: 11400000, guid: 40ec41c1962a01e45bc8b194a22efb5e, type: 2}
+      propertyPath: music
+      value: 
+      objectReference: {fileID: 8300000, guid: b09b5a73226ffa44b9a04791d0c992fe, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 40ec41c1962a01e45bc8b194a22efb5e, type: 2}
   m_RootGameObject: {fileID: 1976029791}
@@ -7106,6 +7110,7 @@ MonoBehaviour:
   otherBillboard: {fileID: 100000, guid: 823ba004de712df42b17ba98e1867993, type: 2}
   rockBillboard: {fileID: 100000, guid: 35a255e1430a83547a7392ccc3b18c29, type: 2}
   treeBillboard: {fileID: 100000, guid: ac5c705183f2b024c82bdb09006d5906, type: 2}
+  music: {fileID: 8300000, guid: b09b5a73226ffa44b9a04791d0c992fe, type: 3}
 --- !u!4 &1976029793
 Transform:
   m_ObjectHideFlags: 0
