@@ -19,6 +19,7 @@ public class ObstacleManager : MonoBehaviour {
 	bool running= true;
 	bool musicPlaying=false;
 	float musicRun=0.0f;
+	public int lives = 3;
 	// Use this for initialization
 	void Start () {
 		obstacleList= new ArrayList();
@@ -74,7 +75,11 @@ public class ObstacleManager : MonoBehaviour {
 				float shitZ = shitmobile.transform.position.z;
 				if(g.transform.position.x>-15.0f && g.transform.position.x <15.0f && Mathf.Abs(g.transform.position.z-shitZ)<4.0f){//collision detection
 					toRemove= g;
-					running=false;
+					if(lives > 0){
+						lives--;
+					}else{
+						running=false;
+					}
 				}
 
 			}
@@ -88,7 +93,8 @@ public class ObstacleManager : MonoBehaviour {
 	}
 
 	void OnGUI(){
-		GUI.TextArea(new Rect(500,500,100,50),"Score: " + score.ToString());
+		GUI.TextArea(new Rect(20,20,100,50),"Hits Remaining: " + lives);
+		GUI.TextArea(new Rect(20,80,100,50),"Score: " + score.ToString());
 
 		if(!running){
 			GUI.TextArea(new Rect(500,200,100,50),"GAME OVER!");

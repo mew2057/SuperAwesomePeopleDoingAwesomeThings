@@ -24,7 +24,7 @@ public class InputManager : MonoBehaviour {
 			mouseDown=false;
 		}
 		if (Input.GetKeyDown(KeyCode.Escape)) {
-			Application.Quit();
+			Application.LoadLevel("Main Menu");
 		}
 
 		Vector3 curPosition= mainPlayer.transform.position;

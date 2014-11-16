@@ -6,17 +6,33 @@ Direct3D:
     Vendor:   NVIDIA
     VRAM:     1985 MB
 Begin MonoManager ReloadAssembly
-Platform assembly: D:\Cargame\Builds\cargame_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading D:\Cargame\Builds\cargame_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: D:\Cargame\Builds\cargame_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
-Loading D:\Cargame\Builds\cargame_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
-Platform assembly: D:\Cargame\Builds\cargame_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading D:\Cargame\Builds\cargame_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: D:\Cargame\Builds\cargame_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
-Loading D:\Cargame\Builds\cargame_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
-Platform assembly: D:\Cargame\Builds\cargame_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
-Loading D:\Cargame\Builds\cargame_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
-- Completed reload, in  0.043 seconds
+Platform assembly: D:\Nick\VersionControl\SuperAwesomePeopleDoingAwesomeThings\Builds\cargame_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\Nick\VersionControl\SuperAwesomePeopleDoingAwesomeThings\Builds\cargame_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\Nick\VersionControl\SuperAwesomePeopleDoingAwesomeThings\Builds\cargame_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading D:\Nick\VersionControl\SuperAwesomePeopleDoingAwesomeThings\Builds\cargame_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: D:\Nick\VersionControl\SuperAwesomePeopleDoingAwesomeThings\Builds\cargame_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\Nick\VersionControl\SuperAwesomePeopleDoingAwesomeThings\Builds\cargame_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\Nick\VersionControl\SuperAwesomePeopleDoingAwesomeThings\Builds\cargame_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
+Loading D:\Nick\VersionControl\SuperAwesomePeopleDoingAwesomeThings\Builds\cargame_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
+Platform assembly: D:\Nick\VersionControl\SuperAwesomePeopleDoingAwesomeThings\Builds\cargame_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading D:\Nick\VersionControl\SuperAwesomePeopleDoingAwesomeThings\Builds\cargame_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+- Completed reload, in  0.046 seconds
 <RI> Initializing input.
 <RI> Input initialized.
-desktop: 1920x1080 60Hz; virtual: 3600x1080 at 0,0
+desktop: 1920x1080 60Hz; virtual: 3000x1920 at 0,-414
+WARNING: Shader Unsupported: 'Hidden/TerrainEngine/Details/BillboardWavingDoublePass' - Pass '' shader state not supported
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1783)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1783)
+
+UnloadTime: 0.379163 ms
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 329.
+Total: 1.420797 ms (FindLiveObjects: 0.019626 ms CreateObjectMapping: 0.010239 ms MarkObjects: 0.143928 ms  DeleteObjects: 0.507163 ms)
+
+WARNING: Shader Unsupported: 'Hidden/TerrainEngine/Details/BillboardWavingDoublePass' - Pass '' shader state not supported
