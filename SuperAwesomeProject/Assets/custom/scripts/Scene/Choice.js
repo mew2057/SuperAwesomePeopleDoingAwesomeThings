@@ -8,13 +8,14 @@ class Prompt extends System.Object
 }
 
 class Option extends Prompt {
-	var scene:String;
 	var nextChoice:Choice;
 	// TODO hook events into this.
 }
 
 public class Choice extends MonoBehaviour
 {
+	public var scene:String;
+
 	public var prompt:Prompt;
 	public var optionA:Option;
 	public var optionB:Option;
