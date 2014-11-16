@@ -12,6 +12,7 @@ public class ObstacleManager : MonoBehaviour {
 	float spawnTimer= 0.5f;
 	float currentTimer= 0.0f;
 	int obstacleType = 0;
+	float curSpeed= 100.0f;
 	GameObject shitmobile;
 	// Use this for initialization
 	void Start () {
@@ -21,6 +22,7 @@ public class ObstacleManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		curSpeed+=Time.deltaTime*10.0f;
 		currentTimer+=Time.deltaTime;
 		if(currentTimer > spawnTimer){
 			currentTimer =0.0f;
@@ -49,7 +51,7 @@ public class ObstacleManager : MonoBehaviour {
 		GameObject toRemove =null;
 		foreach(GameObject g in obstacleList){
 			Vector3 newVector =  g.transform.position;
-			newVector.x+= Time.deltaTime * 100;
+			newVector.x+= Time.deltaTime * curSpeed;
 			g.transform.position= newVector;
 
 			float shitZ = shitmobile.transform.position.z;

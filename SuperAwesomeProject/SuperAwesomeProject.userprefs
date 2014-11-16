@@ -1,14 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\custom\scripts\SceneManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\custom\scripts\InputManager.cs">
     <Files>
-      <File FileName="Assets\custom\scripts\effects\FlickerLight.js" Line="4" Column="31" />
-      <File FileName="Assets\Scenes\menu core system\Scripts\InGameMenu.js" Line="1" Column="1" />
-      <File FileName="Assets\custom\scripts\Billboard.js" Line="1" Column="1" />
-      <File FileName="Assets\custom\scripts\Controls\Player.js" Line="1" Column="1" />
-      <File FileName="Assets\custom\scripts\Controls\GameManager.js" Line="1" Column="1" />
-      <File FileName="Assets\custom\scripts\SceneManager.cs" Line="15" Column="104" />
-      <File FileName="Assets\Standard Assets\OVR\Scripts\OVRCameraRig.cs" Line="103" Column="1" />
+      <File FileName="Assets\custom\scripts\InputManager.cs" Line="25" Column="4" />
+      <File FileName="Assets\custom\scripts\ObstacleManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\custom\scripts\Billboard.js" Line="17" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
